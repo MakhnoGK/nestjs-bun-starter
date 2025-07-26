@@ -1,9 +1,7 @@
 {
   "scripts": {
-    "dev": "bun run src/main.ts",
-    "dev:watch": "bun run --watch src/main.ts",
-    "build": "rimraf dist && tsc --project tsconfig.build.json && tsc-alias",
-    "start": "node dist/main",
+    "start": "bun run src/main.ts",
+    "start:watch": "bun run --watch src/main.ts",
     "test": "bun test",
     "test:watch": "bun test --watch",
     "lint": "eslint .",
@@ -18,8 +16,6 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.3",
     "prettier": "^3.6.2",
-    "rimraf": "^6.0.1",
-    "tsc-alias": "^1.8.16",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0"
   },
