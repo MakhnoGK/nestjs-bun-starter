@@ -2,7 +2,7 @@
   "scripts": {
     "dev": "bun run src/main.ts",
     "dev:watch": "bun run --watch src/main.ts",
-    "build": "tsc && tsc-alias",
+    "build": "rimraf dist && tsc --project tsconfig.build.json && tsc-alias",
     "start": "node dist/main",
     "test": "bun test",
     "test:watch": "bun test --watch",
