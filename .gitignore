@@ -1,0 +1,19 @@
+# Node
+
+node_modules
+
+# Build
+
+dist
+
+# IDE
+.vscode
+.zed
+.idea
+
+
+# Environment
+
+.env
+.env.*
+!.env.example
