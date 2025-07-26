@@ -14,7 +14,7 @@ const config = {
     arrowParens: 'always',
     bracketSpacing: true,
 
-    importOrder: ['^node:', '<THIRD_PARTY_MODULES>', '^~/(.*)$', '^[../]', '^[./]'],
+    importOrder: ['^bun:', '<THIRD_PARTY_MODULES>', '^~/(.*)$', '^[../]', '^[./]'],
     importOrderSeparation: false,
     importOrderSortSpecifiers: false,
     importOrderParserPlugins: ['typescript', 'decorators-legacy'],
