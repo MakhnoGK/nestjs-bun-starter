@@ -23,8 +23,8 @@ A modern, high-performance NestJS starter template powered by [Bun](https://bun.
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd nest-change-runtime
+   git clone https://github.com/MakhnoGK/nestjs-bun-starter.git
+   cd nestjs-bun-starter
    ```
 
 2. **Install dependencies**
