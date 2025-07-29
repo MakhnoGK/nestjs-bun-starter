@@ -1,6 +1,10 @@
 import path from 'path';
 import { DataSource } from 'typeorm';
 
+const SRC_PATH = path.resolve(process.cwd(), 'src');
+const ENTITIES_PATH = path.resolve(SRC_PATH, '**/*.entity.ts');
+const MIGRATIONS_PATH = path.resolve(SRC_PATH, 'migrations', '**/*.ts');
+
 export default new DataSource({
     type: 'postgres',
     host: Bun.env.POSTGRES_HOSTNAME,
@@ -9,11 +13,10 @@ export default new DataSource({
     password: Bun.env.POSTGRES_PASSWORD,
     database: Bun.env.POSTGRES_DATABASE,
 
-    entities: [path.resolve(process.cwd(), 'src', '**/*.entity.ts')],
+    entities: [ENTITIES_PATH],
 
-    // TODO: Extract to .env
-    migrationsTableName: '_migrations',
-    migrations: [path.resolve(process.cwd(), 'src', 'migrations', '**/*.ts')],
+    migrationsTableName: Bun.env.MIGRATIONS_PATH || '_migrations',
+    migrations: [MIGRATIONS_PATH],
 
     logging: true,
 });
